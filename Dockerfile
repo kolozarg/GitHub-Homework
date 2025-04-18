@@ -1,7 +1,7 @@
 FROM nginx:latest
 
-# Saját index.html hozzáadása
-RUN echo 'DevOps homework by: Kolozár Gábor' > /usr/share/nginx/html/index.html
+#UTF-8 miatt kell. Egyébként nem jeleníti meg a magyar ékezetes karaktereket: DevOps homework by: KolozĂĄr GĂĄbor
+COPY index.html /usr/share/nginx/html/index.html
 
 EXPOSE 80
 
